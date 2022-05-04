@@ -8,6 +8,13 @@ $(function () {
         autoplay: true,
         autoplaySpeed: 1000,
         vertical: true,
-        dots:true,
+        dots: true,
     });
+
+    $('.mopen').on('click', function () {
+        $('.gnb').toggleClass('on')
+        $('.mopen').toggleClass('oo')
+    })
+
+    
 })
