@@ -38,5 +38,37 @@ $(function () {
     $('.utube i:nth-of-type(2)').on('click', function () {
         $("#myMovie").YTPPause();
     });
+
+
+    $('.product_slider').slick({
+        slidesToShow: 5,
+        ceterMode: true,
+        arrows: false,
+        dots: true,
+        autoplay: true,
+
+    });
+
+    $('.product_list i.s_left').on('click', function () {
+        $('.product_slider').slick('slickPrev');
+    });
+
+    $('.product_list i.s_right').on('click', function () {
+        $('.product_slider').slick('slickNext');
+    });
+
+    $('.tab_link>li').on('click', function () {
+        var idx = $(this).index();
+        $(this).addClass('on').siblings().removeClass('on');
+        $('.tab_content>li').eq(idx).addClass('on').siblings().removeClass('on');
+    });
+
+    $('.footer #link').on('change', function () {
+        var lik = $(this).val();
+        if (lik) window.open(lik)
+    });
+
+
+
     //////////////////////////////////////////
 });
