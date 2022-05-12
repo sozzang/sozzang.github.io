@@ -2,7 +2,7 @@ $(function () {
     //////////////////////////////////////////
 
     $('.top_banner i').on('click', function () {
-        $('.top_banner').slideUp(5000);
+        $('.top_banner').slideUp();
     })
 
     $('.main_slider').on('init reInit afterChange', function () {
@@ -46,6 +46,17 @@ $(function () {
         arrows: false,
         dots: true,
         autoplay: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    ceterMode: false,
+
+                }
+            },
+
+        ]
 
     });
 
@@ -66,6 +77,11 @@ $(function () {
     $('.footer #link').on('change', function () {
         var lik = $(this).val();
         if (lik) window.open(lik)
+    });
+
+    $('.menubutton').on('click', function () {
+        $('nav').toggleClass('on');
+        $(this).toggleClass('is-active')
     });
 
 

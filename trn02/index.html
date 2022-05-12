@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./js/jquery.mb.YTPlayer.min.js">
+    <link rel="stylesheet" href="./css/menubutton.css">
     <link rel="stylesheet" href="./css/main.css">
 
 </head>
@@ -43,6 +44,11 @@
 
                         </ul>
                     </nav>
+                    <button class="hamburger menubutton hamburger--collapse" type="button">
+                        <span class="hamburger-box">
+                          <span class="hamburger-inner"></span>
+                        </span>
+                      </button>
                     <form action="javascript:formSubmit()" id="searchForm">
                         <input type="text">
                         <button>
@@ -134,7 +140,7 @@
     <section class="movie">
         <div class="container">
             <figure>
-                <video src="./img/movie.mp4" muted autoplay loop></video>
+                <video src="./img/movie.mp4" muted autoplay loop playsinline></video>
             </figure>
             <div class="dec">
                 <h2>JEWELLERY COLLECTION</h2>
@@ -285,7 +291,7 @@
 
             </ul>
             <div class="sns">
-                <a href=""><i class="xi-kakaotalk"></i> </a>
+                <a href="#!"><i class="xi-kakaotalk"></i> </a>
                 <a href=""><i class="xi-facebook"></i> </a>
                 <a href=""><i class="xi-naver"></i> </a>
             </div>
